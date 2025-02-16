@@ -1,0 +1,21 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: #a699ba;
+    --darkgray: #605d65;
+    --lightgray: #9c93aa;
+    --purple: #8d7aaa;
+    --darkpurple: #503579;
+    --lightpurple: #9683b4;
+    --orange: #f6c359;
+
+    --text-color: var(--black);
+    --text-second-color: var(--white);
+
+    --active-tab: var(--orange);
+
+    --placeholder-background: var(--lightpurple);
+    --placeholder-text-color: var(--lightgray);
+
+    --button-background: var(--orange);
+}
