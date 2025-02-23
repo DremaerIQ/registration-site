@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,78 @@
 
 <body>
     <h1>Registration Form</h1>
+    <hr class="main-divider">
+    <p>Здравствуйте!</p>
+
+    <div class="form-frame">
+        <header>
+            <a href="#!" class="variant">Войти</a>
+            <a href="#!" class="variant active">Регистрация</a>
+        </header>
+
+        <form action="#">
+            <div class="entry">
+                <label for="login">Придумай логин</label>
+                <input type="text" name="login" id="login" placeholder="Придумай логин">
+            </div>
+
+            <div class="entry">
+                <label for="password">Придумай пароль</label>
+                <input type="password" name="password" id="password" placeholder="Придумай пароль">
+            </div>
+
+            <div class="entry">
+                <p>Выбери пол</p>
+                <span>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Мужской</label>
+                </span>
+                <span>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Женский</label>
+                </span>
+            </div>
+
+            <div class="entry">
+                <p>Выбери желаемые курсы</p>
+                <span>
+                    <input type="checkbox" name="course" id="front">
+                    <label for="front">Frontend</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="course" id="roblox">
+                    <label for="roblox">Roblox</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="course" id="figma">
+                    <label for="figma">Figma</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="course" id="scratch">
+                    <label for="scratch">Scratch</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="course" id="python">
+                    <label for="python">Python</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="course" id="unity">
+                    <label for="unity">Unity</label>
+                </span>
+            </div>
+
+            <div class="entry">
+                <label for="about">
+                    Расскажи немного о себе, о своих достижениях и мечтах
+                </label>
+                <textarea name="about" id="about" rows="10" placeholder="Расскажи о себе!"></textarea>
+            </div>
+
+            <button form__btn>Зарегистрироваться</button>
+
+            <hr class="form__divider">
+        </form>
+    </div>
 </body>
 
 </html>

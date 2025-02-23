@@ -3,14 +3,13 @@
     --white: #fff;
     --gray: #a699ba;
     --darkgray: #605d65;
-    --lightgray: #9c93aa;
-    --purple: #8d7aaa;
-    --darkpurple: #503579;
+    --lightgray: #c2b8d2;
+    --purple: rgba(134, 110, 171, 0.95);
     --lightpurple: #9683b4;
     --orange: #f6c359;
 
     --text-color: var(--black);
-    --text-second-color: var(--white);
+    --text-color-second: var(--white);
 
     --active-tab: var(--orange);
 
@@ -18,4 +17,152 @@
     --placeholder-text-color: var(--lightgray);
 
     --button-background: var(--orange);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+
+    background-image: url("../img/bg.png");
+    background-position: top right;
+    background-size: clamp(300px, 70dvw, 700px);
+    background-repeat: no-repeat;
+
+    &>h1,
+    &>p {
+        text-align: center;
+    }
+
+    &>h1 {
+        text-shadow: 0 0 4px var(--darkgray);
+    }
+
+    &>hr {
+        height: 4px;
+        margin-block: 30px;
+
+        border: none;
+        border-radius: 5px;
+        background-color: var(--darkpurple);
+    }
+
+    &>p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.form-frame {
+    margin-block: 30px;
+    padding: 30px 60px;
+
+    text-align: center;
+
+    color: var(--text-color-second);
+    background-color: var(--purple);
+
+    border-radius: 15px;
+
+    &>header {
+        margin-bottom: 30px;
+    }
+
+    &>header>a.variant {
+        color: var(--darkgray);
+        text-decoration: none;
+
+        &.active {
+            color: var(--text-color-second);
+            position: relative;
+        }
+
+        &.active::after {
+            content: "";
+
+            width: 110%;
+            height: 2px;
+
+            background-color: var(--active-tab);
+
+            position: absolute;
+            top: 150%;
+            left: -5%;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+
+    &>form {
+        .entry {
+            margin-block: 40px;
+
+            &>label,
+            &>p {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                color: var(--white);
+            }
+
+            &>input,
+            &>textarea {
+                display: block;
+                width: 100%;
+                padding: 10px;
+
+                background-color: var(--placeholder-background);
+                color: var(--placeholder-text-color);
+
+                border: none;
+                border-radius: 20px;
+            }
+
+            &>input::placeholder,
+            &>textarea::placeholder {
+                text-align: center;
+            }
+
+            &>span:not(:last-of-type) {
+                margin-right: 50px;
+            }
+
+            &>span>input {
+                margin-right: 10px;
+            }
+
+            &>textarea {
+                width: 100%;
+                height: 100px;
+            }
+
+        }
+
+        &>button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+
+            background-color: var(--button-background);
+            border: none;
+            border-radius: 20px;
+        }
+
+        &>hr {
+            height: 4px;
+            margin-block: 30px;
+
+            border: none;
+            border-radius: 5px;
+            background-color: var(--gray);
+        }
+    }
 }
